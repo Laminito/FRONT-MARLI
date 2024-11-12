@@ -1,0 +1,118 @@
+@import "../../assets/styles/variables";
+
+.linkCard{
+    max-width: 500px;
+    width: 100%;
+    display: inline-block;
+}
+
+.allContainer{
+    width: 100%;
+    .imageEprixContainer{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            filter: grayscale(1);
+
+            &:hover{
+                filter: grayscale(0);
+                transition: all 0.5s;
+            }
+        }
+
+        .prixBien{
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: $gray-color;
+            color: $white-color;
+            border-radius: 100px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 25px;
+        }
+    }
+    .partialInfoBien{
+        width: 100%;
+        margin: 15px 0px;
+        
+        h2{
+            font-weight: 500;
+            font-size: 19px;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .partialCarteristique{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+
+            .oneCaractq{
+                width: fit-content;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 8px;
+
+                p{
+                    font-weight: 300;
+                    margin: 0;
+                    &:nth-child(1){
+                        width: 5px;
+                        height: 5px;
+                        min-width: 5px;
+                        min-height: 5px;
+                        background-color: $white-color;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+    
+    &:hover{
+        .prixBien{
+            background-color: $green-color;
+        }
+    }
+}
+
+.statusBienVendu{
+    .prixBien{
+        letter-spacing: 1.5px !important;
+        font-size: 14px !important;
+    }
+
+    &:hover{
+        .prixBien{
+            background-color: $red-color !important;
+        }
+    }
+}
+
+.statusSousCompromis{
+    .prixBien{
+        letter-spacing: 1.5px !important;
+        font-size: 14px !important;
+    }
+
+    &:hover{
+        .prixBien{
+            background-color: $orange-color !important;
+        }
+    }
+}
